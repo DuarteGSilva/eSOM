@@ -1,0 +1,308 @@
+/* #region general non-specific styles */
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+
+    color-scheme: dark;
+    --text-color: hsl(36, 5%, 81%);
+    --accent-2: hsl(180, 90%, 40%);
+    --accent-1: hsl(180, 90%, 34%);
+    --accent-3: hsla(180, 90%, 40%, 0.27);
+    --background-main: hsl(200, 6%, 10%);
+    --background-sec: hsl(210, 5%, 16%);
+    --background-thrd: hsl(220, 4%, 22%);
+
+    --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    border-left: solid var(--background-thrd) 1px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--background-sec); 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--background-thrd); 
+}
+
+.draggable {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    -webkit-app-region: drag;
+}
+/* #endregion */
+
+/* #region home page */
+
+nav {
+    height: 100%;
+    width: 11rem;
+    background-color: var(--background-sec);
+    border-left: 3px solid var(--accent-1);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    margin-right: 4rem;
+}
+
+section.aside {
+    width: 13rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%;
+    /* grid-area: aside; */
+}
+
+.but {
+    display: block;
+    background-color: var(--background-thrd);
+    border: 0;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    margin-top: 0.9rem;
+    margin-left: 2rem;
+    box-shadow: var(--shadow);
+    font-size: large;
+    cursor: pointer;
+    transition: background-color 0.3s, margin 0.3s;
+    color: var(--text-color);
+    height: 2.6rem;
+    text-align: center;
+}
+.but:not(button) {
+    height: auto;
+    padding-inline: 0;
+    padding-block: 0.7rem;
+    text-decoration: none;
+}
+
+.but:not(.collapsible):not(:disabled):focus,
+.but:not(:disabled):active,
+.but:not(:disabled):hover {
+    outline: none;
+    background-color: var(--background-sec);
+    margin-left: 3rem;
+}
+.but.collapsible:focus {
+    outline: none;
+    background-color: var(--background-sec);
+}
+.but:last-child {
+    margin-top: auto;
+    margin-bottom: 2rem;
+    background-color: rgb(120, 5, 5);
+}
+.but:last-child:focus,
+.but:last-child:active,
+.but:last-child:hover {
+    background-color: rgb(150, 10, 10);
+}
+
+.but:disabled {
+    background-color: var(--background-sec);
+}
+
+/* #endregion */
+
+/* #region newModel */
+body {
+    background-color: var(--background-main);
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    height: calc(100svh - 2rem);  /* calc used for equal margin on all sides and no scrollbar */
+}
+
+.inp {
+    display: block;
+    background-color: var(--background-main);
+    border: 0;
+    border-radius: 1rem;
+    padding-inline: 1rem;
+    padding-block: .5rem;
+    margin-left: 2rem;
+    width: 7rem;
+    font-size: large;
+    transition: background-color 0.3s, margin 0.3s;
+    color: var(--text-color);
+    outline: solid .18rem var(--accent-1);
+}
+
+.inp:focus,
+.inp:active,
+.inp:hover {
+    outline: solid .19rem var(--accent-2);
+    /* background-color: var(--background-main); */
+    /* margin-left: 3rem; */
+}
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+nav span {
+    color: var(--text-color);
+    margin: 1rem;
+    margin-left: 2rem;
+    margin-top: 0.9rem;
+}
+
+.content {
+    width: 13rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: var(--background-thrd);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    margin-top: .5rem;
+    margin-left: 2rem;
+    max-height: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.collapsible:first-of-type {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    place-items: center;
+    gap: .6rem;
+}
+
+nav svg {
+    fill: var(--accent-3);
+    height: 2.4rem;
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+nav .active svg {
+    transform: rotate(0deg);
+}
+
+div.legend {
+    background-color: var(--background-sec);
+    box-shadow: var(--shadow);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+div.legend span {
+    color: var(--text-color);
+}
+
+section.map {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    gap: 1rem;
+}
+
+aside {
+    background-color: var(--background-sec);
+    box-shadow: var(--shadow);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: auto;
+    height: 80%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: .1rem;
+}
+
+aside > div {
+    display: flex;
+    justify-items: left;
+    gap: 0.2rem;
+}
+/* #endregion */
+
+/* #region desc page */
+.form {
+    background-color: var(--background-sec);
+    box-shadow: var(--shadow);
+    border-radius: 1rem;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form > span {
+    font-size: 1.5rem;
+    margin: .6rem;
+    margin-top: 0;
+}
+
+.but2 {
+    display: block;
+    background-color: var(--background-thrd);
+    border: 0;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    margin-top: 0.9rem;
+    box-shadow: var(--shadow);
+    font-size: large;
+    cursor: pointer;
+    transition: background-color 0.3s, margin 0.3s;
+    color: var(--text-color);
+    height: 2.6rem;
+    text-align: center;
+}
+.but2:not(button) {
+    height: auto;
+    padding-inline: 0;
+    padding-block: 0.7rem;
+    text-decoration: none;
+}
+
+.but2:not(.collapsible):not(:disabled):focus,
+.but2:not(:disabled):active,
+.but2:not(:disabled):hover {
+    outline: none;
+    background-color: var(--background-sec);
+
+}
+
+.but2:last-child {
+    margin-top: auto;
+    margin-bottom: 2rem;
+    background-color: rgb(120, 5, 5);
+}
+.but2:last-child:focus,
+.but2:last-child:active,
+.but2:last-child:hover {
+    background-color: rgb(150, 10, 10);
+}
+
+.but2:disabled {
+    background-color: var(--background-sec);
+}
+
+aside::-webkit-scrollbar-thumb {
+    background: var(--background-thrd); 
+}
+
+/* #endregion */
