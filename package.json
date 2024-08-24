@@ -1,0 +1,31 @@
+{
+  "name": "esom",
+  "productName": "eSOM",
+  "version": "0.3.0",
+  "description": "A more modern and simpler version of JAToon for creating Self Organizing Maps (Kohonen Neural Networks) mainly for chem-informatics.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "start forge": "electron-forge start",
+    "build": "webpack",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": "Duarte Silva",
+  "license": "MIT",
+  "dependencies": {
+    "@rdkit/rdkit": "^2023.9.2-1.0.0",
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.4.2",
+    "@electron-forge/maker-deb": "^6.4.2",
+    "@electron-forge/maker-rpm": "^6.4.2",
+    "@electron-forge/maker-squirrel": "^6.4.2",
+    "@electron-forge/maker-zip": "^6.4.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
+    "electron": "^25.9.0",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

@@ -1,0 +1,14 @@
+
+body {
+    background-color: rgb(63, 63, 63);
+    display: flex;
+}
+
+canvas {
+    margin: auto;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    height: 500px;
+    width: 500px;
+    image-rendering: pixelated;
+}

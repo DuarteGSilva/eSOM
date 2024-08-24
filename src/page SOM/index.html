@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <script src="../../dist/newModel/code.js" defer></script> -->
+    <script src="code.js" defer type="module"></script>
+    <!-- <script src="../modules/canvas SOM/canvasSOM.js" defer></script> -->
+
+    <div class="draggable"></div>
+
+    <nav>
+    <section class="aside">
+        <button class="but collapsible">
+            Network Options
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - 
+                    https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 
+                12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z"/>
+            </svg>
+        </button>
+        <div class="content">
+            <div>
+                <label for="alg">Algorithm Used</label>
+                <select id="alg">
+                    <option value="trad" selected>Traditional</option>
+                    <option value="exp">Experimental</option>
+                </select>
+            </div>
+
+            <span>Size of Network</span>
+            <input class="inp" id="size" type="number" value="15" placeholder="height/with of the network">
+            
+            <span>Initial Learning Span</span>
+            <input class="inp" id="ils" type="number" value="7" placeholder="how fast it learns">
+            
+            <span>Number of Epochs</span>
+            <input class="inp" id="epochs" type="number" value="300" placeholder="number of runs to train">
+
+            <div class="cbdiv">
+                <label class="cblabel" for="ccolors">Constant Colors</label>
+                <input class="cbox" type="checkbox" id="ccolors">
+            </div>
+            
+            <br>
+        </div>
+
+        <button class="but" id="save" disabled>Save Network</button>
+        <button class="but" id="load">Load Network</button>
+        <button class="but" id="opendata">Load Training Data</button>
+        <button class="but" id="train" disabled>Train Network</button>
+        <button class="but" id="map" disabled>Map Objects</button>
+        <button class="but" id="paint" disabled>Paint Network</button>
+        <br>
+        <a class="but" href="../page home/index.html">Back to Menu</a>
+    </section>
+    </nav>
+    
+    <section class="map">
+        <canvas class="som" width="500" height="500"></canvas>
+        <div class="legend">
+            <span><b>Epoch: </b></span><span id="nEpochs">0</span>
+        </div>
+    </section>
+
+    <!-- the following is a template for what goes inside the aside element -->
+    <!-- <div>
+        <svg viewBox="0 0 1 1" height="1rem">
+            <rect x="0" y="0" width="1" height="1" />
+        </svg>
+        ClassName
+    </div> -->
+    <aside></aside>
+</body>
+</html>
