@@ -1,7 +1,7 @@
 
 # eSOM - simple and modern Self-Organizing Maps (SOM)
 
-- [~Download v0.3.0 (windows installer)~ (Currently unavailable due to icon bug)][1]
+- [Download v0.3.0 (windows installer)][1]
 
 <img alt="eSOM Logo" src="https://github.com/DuarteGSilva/eSOM/blob/main/img/eSOM_logo.png?raw=true" width=256/>
 
@@ -14,6 +14,8 @@ This app, made with the [ElectronJS Framework][1] was originally a more modern a
 ### Getting Started
 
 The app is very straightforward to use, start by downloading the installer above (or running the code in this repository with electron). There are only two screens to this app, the "home screen" and the "SOM screen", you will start in the home screen on app launch, from there you can only quit the app, go to the SOM screen or open Chrome Dev Tools (might be helpful for debugging if you know what you are doing). You can go to the SOM screen by clicking on "Self Organizing Map" which is where most of the app's features lie.
+
+NOTE: The installer is made with electron and when run installs the app to `%APPDATA%/../Local/esom`, you then need to go there and create a desktop shortcut manually, or run it from there.
 
 ### Data
 
@@ -47,6 +49,6 @@ This app is in an unfinished state. So while the descriptors page works as far a
 ##
 
 
-[1]: <> "'eSOM-v0.3.0 Setup.exe' Download"
+[1]: <https://www.dropbox.com/scl/fi/1k72so5sq5wd58ibypfc2/eSOM-0.3.0-Setup.exe?rlkey=y8q3k1bdth47a507ir7fw77yr&st=gkmk62ub&dl=0> "'eSOM-v0.3.0 Setup.exe' Download"
 [2]: <https://www.electronjs.org/> "electronjs.org"
 [3]: <https://github.com/DuarteGSilva/eSOM/tree/main/example%20data> "Example Data - github"
