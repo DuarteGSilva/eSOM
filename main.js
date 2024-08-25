@@ -16,7 +16,8 @@ function createMainWindow() {
         },
         webPreferences: {
             preload: path.join(__dirname, 'preload.js')
-        }
+        },
+        icon: path.join(__dirname, 'img/eSOM_logo.ico'),
     })
 
     win.loadFile(path.join(__dirname, 'src/page home/index.html'))
