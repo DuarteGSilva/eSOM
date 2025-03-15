@@ -27,16 +27,16 @@ NOTE: The data ***does NOT need to be normalized*** as the network normalizes it
 
 To train a SOM with this app is very simple (provided your data is well formatted), just open the file by clicking on "Load Training Data" and then click "Train Network" (Note: you might want to click on "Paint Network" after training it to see a better picture of the network in question). 
 
-You can however customize the training with a set of parameters which I'm not gonna explain here, to change these click on "Network Options".
+You can however customize the training with a set of parameters which I'm not going to explain here, to change these click on "Network Options".
 
 #### Algorithms
 
 This app features **two algorithms** for training SOMs. The traditional one is found anywhere referencing SOMs, but the experimental one was coded by me while trying to over-optimize the traditional one.  
-This new algorithm is ***roughly 20x faster*** or close to that. So what the traditional algorithm does in ~300 epochs this one can (and will only) do in ~15 (as if you let it run for too many epochs it gliches producing no significant map).
+This new algorithm is ***roughly 20x faster*** or close to that. So what the traditional algorithm does in ~300 epochs this one can (and will only) do in ~15 (as if you let it run for too many epochs it glitches producing no significant map).
 
 ### Testing a SOM
 
-Once again, very simple, just click on "Map Objects" and select the test file, the graphic will show where each object would have "landed" on the map, along with what color it was supposed to be, and at the bottom the percentage of matches between the supposed/actual color.
+Once again, very simple, just click on "Map Objects" and select the test file, the graphic will show where each object would have "landed" on the map, along with what colour it was supposed to be, and at the bottom the percentage of matches between the supposed/actual colour.
 
 ### Saving/Loading a Network
 
@@ -44,7 +44,7 @@ Couldn't be more straightforward, save a network anytime by clicking on the butt
 
 ### Disclaimer
 
-This app is in an unfinished state. So while the descriptors page works as far as I have tested it there might be bugs within it and the other pages are not done at all (with the exception of the descriptors one which has a start in it's own branch that wil only be merged when in a more "complete" state).
+This app is in an unfinished state. So while the descriptors page works as far as I have tested it there might be bugs within it and the other pages are not done at all (with the exception of the descriptors one which has a start in it's own branch that will only be merged when in a more "complete" state).
 
 ##
 
